@@ -1,0 +1,205 @@
+@charset "UTF-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700,300');
+@font-face {
+    font-family: 'dubtronicregular';
+    src: url('../fonts/Dubtronic-Solid-webfont.eot');
+    src: url('../fonts/Dubtronic-Solid-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'dubtronic_inlineregular';
+    src: url('../fonts/Dubtronic-Inline-webfont.eot');
+    src: url('../fonts/Dubtronic-Inline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/***Glossy Core Styles***/
+.glossy{
+	background-image:url(../img/glossBG.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	background-attachment:fixed;
+	background-clip: text;
+  	text-fill-color: transparent;
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+  	-moz-text-fill-color: transparent;
+	position:relative;
+}
+.glossy-outline::before{
+	display:inline-block;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	background-attachment:fixed;
+	background-clip: text;
+  	text-fill-color: transparent;
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+  	-moz-text-fill-color: transparent;
+	position:absolute;
+	top:0;
+	left:0;
+	font-size:inherit;
+	content:attr(dataText);
+}
+
+/***Button Styles***/
+.glossy-button{
+	display:inline-block;
+	background-image:url(../img/glossBG.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	background-attachment:fixed;
+	background-color:rgba(255,255,255,0);
+	color:rgba(255,255,255,0);
+	padding:12px 36px;
+	position:relative;
+	line-height: 24px;
+    font-size: 16px;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	margin:6px;
+}
+.glossy-button::before{
+	background-image:inherit;
+	display:inline-block;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	background-attachment:fixed;
+	background-clip: text;
+  	text-fill-color: transparent;
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+  	-moz-text-fill-color: transparent;
+	position:absolute;
+	top:0;
+	left:50%;
+	width:100%;
+	box-sizing: border-box;
+	margin:0 !important;
+	transform: translateX(-50%);
+	padding:inherit;
+	line-height: inherit;
+    font-size: inherit;
+	text-transform:inherit;
+	letter-spacing:inherit;
+	content:attr(dataText);
+	z-index:2;
+	transition:all ease-in-out 0.4s;
+}
+.glossy-button::after{
+	content:" ";
+	display:inline-block;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:calc(100% - 8px);
+	height:calc(100% - 8px);
+	transform:translate(-50%,-50%);
+	background-color:#202020;
+	z-index:1;
+	transition:background-color ease-in-out 0.4s;
+}
+.glossy-button:hover::after{
+	background-color:rgba(255,255,255,0.3);
+}
+.glossy-button:hover::before{
+	text-fill-color: #202020;
+	-webkit-text-fill-color: #202020;
+  	-moz-text-fill-color: #202020;
+}
+
+/***Block Content Styles***/
+.glossy-block{
+	display:inline-block;
+	background-image:url(../img/glossBG.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	background-attachment:fixed;
+	padding:4px;
+	position:relative;
+}
+.glossy-block.holographic{
+	background-image:url(../img/holo2.png) !important;
+}
+.glossy-block>.glossy-insert{
+	padding:24px;
+	background-color:#FAFAFA;
+	display:block;
+}
+
+/***Image Styles***/
+.glossy-image{
+	background-image:url(../img/glossBG.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	background-attachment:fixed;
+	display:inline-block;
+	text-align:center;
+}
+.glossy-image>img{
+	vertical-align: bottom;
+}
+
+/***Horizontal Rule Styles***/
+.glossy-hr{
+	background-image:url(../img/glossBG.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	background-attachment:fixed;
+	height:4px;
+	display:block !important;
+	margin:6em 12em;
+}
+
+/***Holographic Styles***/
+.holographic{
+	background-image:url(../img/holo1.png);
+	display:inline-block;
+	font-family: 'dubtronicregular';
+}
+.glossy-button.holographic{
+	background-image:url(../img/holo1.png);
+}
+.holographic::before{
+	background-image:url(../img/holo2.png);
+	display:inline-block;
+	width:100%;
+	font-family: 'dubtronic_inlineregular';
+}
+.glossy-image.holographic{
+	background-image:url(../img/holo2.png);
+}
+
+/***Gold Styles***/
+.gold{
+	background-image:url(../img/gold.jpg);
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+	position:static;
+	text-fill-color: rgba(230,170,0,0.5);
+    -webkit-text-fill-color: rgba(230,170,0,0.5);
+    -moz-text-fill-color: rgba(230,170,0,0.5);
+}
+.glossy-button.gold{
+	background-image:url(../img/gold.png);
+}
+@media screen and (min--moz-device-pixel-ratio:0) {
+	.glossy, .glossy-outline::before{
+		background-attachment:local;
+	}
+}
